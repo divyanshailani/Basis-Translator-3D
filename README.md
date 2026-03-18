@@ -71,7 +71,8 @@ tilted      → Crystal lattice — axes no longer orthogonal
 ```
 Phase_1_Logic/
 ├── matrices.py      ← 4 basis matrices (P) + 4 action matrices (M)
-└── basis_utils.py   ← express_in_basis(), back_to_standard(), similarity_transform()
+├── basis_utils.py   ← express_in_basis(), back_to_standard(), similarity_transform()
+└── demo.py          ← CLI report for coordinate translation and relative transforms
 
 Phase_2_Blender/
 ├── scenes/
@@ -86,6 +87,14 @@ Phase_2_Blender/
 
 ## 🚀 Quick Start
 
+### Phase 1 — Python Logic
+```bash
+pip3 install -r requirements.txt
+cd Phase_1_Logic
+python3 demo.py rotated_z45 scale2x
+```
+
+### Phase 2 — Blender Cinematic
 ```
 1. Open Blender 5.x
 2. Scripting tab → Open → Phase_2_Blender/scenes/transform.py
@@ -96,10 +105,22 @@ Phase_2_Blender/
 
 Terminal prints the translation report automatically:
 ```
-🌌 DIMENSIONAL TRANSLATION REPORT
-Physical Location (Standard):      [2.  2.  1.5]
-Alien Coordinates (rotated_z45):   [2.828 0.    1.5  ]
+CHANGE OF BASIS REPORT
+Basis: rotated_z45
+Action: scale2x
+Anchor in standard coordinates: [2.  2.  1.5]
+Anchor in alien coordinates:    [2.828 0.    1.5]
 ```
+
+---
+
+## ✅ Verification
+
+A successful Phase 1 run should:
+- print the anchor point in both standard and alien coordinates
+- show the `rotated_z45` anchor close to `[2.828, 0.000, 1.500]`
+- report a round-trip reconstruction error very close to zero
+- print a full relative transform matrix for `P^-1 M P`
 
 ---
 
