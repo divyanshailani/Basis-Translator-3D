@@ -131,8 +131,8 @@ A successful Phase 1 run should:
 | 01 | 2D Linear Transform Animator | ✅ Complete |
 | 02 | 3D Linear Transform Animator | ✅ Complete |
 | **03** | **Basis Translator 3D** ← *here* | ✅ Complete |
-| 04 | Geometric Linear System Solver | ⏳ |
-| 05 | Eigenvector Explorer | ⏳ |
+| 04 | Geometric Linear System Solver | ✅ Complete |
+| 05 | Eigenvector Explorer | ✅ Complete |
 | 06A | Solar System Simulator | ⏳ |
 | **06B** | **PROJECT VOID** | ⏳ |
 | 07 | Neural Network Visual Simulator | ⏳ |
